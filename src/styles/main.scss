@@ -372,6 +372,12 @@ h3 {
     text-decoration: underline;
 }
 
+.data__start{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
 .sort {
     display: flex;
     align-items: center;
@@ -457,9 +463,6 @@ h3 {
     font-size: 25px;
 }
 
-// .cool__item_calendar a {
-//     margin: 3px 15px;
-// }
 
 .score__name_score {
     color: #109704;
@@ -687,5 +690,8 @@ h3 {
     .cool__item_calendar{
         display: flex;
         flex-direction: column;
+    }
+    .data__start_name {
+        display: none;
     }
 }

@@ -27,13 +27,13 @@ return(
                         </div>
 
                 </div>
-
+                        <div className="col__item leguage-team">
+                                <div className="col__data">{item.competition.name}</div>
+                        </div>
                         <div className="col__item">
                                 <div className={clazz}>{item.status}</div>
                         </div>
-                        <div className="col__item leguage-team">
-                            <div className="col__data">{item.competition.name}</div>
-                        </div>
+                      
 
     </div>
 )

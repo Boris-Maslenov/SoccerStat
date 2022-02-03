@@ -15,19 +15,18 @@ return(
             <div className="col__item col__league-name">
                 {item.name}
             </div>
-            <div className="col__item col__data-start">
-                <span className="col__data">{item.currentSeason.startDate}</span>
-                <span className="col__data"> - </span>
-                <span className="col__data">{item.currentSeason.endDate}</span>
+
+            <div className="col__item data__start">
+
+                <span className="col__data"><span className="data__start_name">Start: </span>  {item.currentSeason.startDate}</span>
+                <span className="col__data"><span className="data__start_name">End: </span>{item.currentSeason.endDate}</span>
             </div>
-            {/* <div className="col__item col__winner"></div> */}
+    
             <div className="col__item cool__item_calendar">
                     <a href={`/league-teams/${item.id}`} className="col__link_competitors">Competitors</a>
                     <a href={`/league-calendar/${item.id}`} className="col__link_calendar">Calendar</a>
             </div>
-            {/* <div className="col__item">
-                
-            </div> */}
+    
     </div>
 )
 
