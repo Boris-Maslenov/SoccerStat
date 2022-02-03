@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+$green: #1B7700;
+$grey: #787575;
+
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: #E9E9E9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+
+#root {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    display: block;
+
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    position: relative;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    &.container_white {
+        background-color: #fff;
+    }
+
+    &.container__flex {
+        display: flex;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.header {
+    background-color: $green;
+    height: 90px;
+}
+
+.footer {
+    background-color: $green;
+    height: 45px;
+    font-size: 16px;
+    color: #fff;
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header__inner {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    max-width: 30px;
+}
+
+.logo__name {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 0 0 0 15px;
+}
+
+.list__title {
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+    background: #F4F4F4;
+    padding: 15px 0;
+}
+
+.go-home {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #109704;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    border-bottom: 1px solid #E1E1E1;
+    padding: 15px 5px;
+
+    &:hover {
+        background-color: #E1E1E1;
+    }
+
+    .col__link:hover {
+        cursor: pointer;
+        color: $green
+    }
+}
+
+.col__img {
+ 
+    text-align: center;
+}
+
+.col__number {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.col__lang {
+    font-size: 20px;
+   
+    text-align: center;
+}
+
+.col__league-name {
+    font-size: 25px;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.col__data {
+    font-size: 17px;
+    color: #64865B;
+    font-weight: 400;
+}
+
+.spinner {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    color: $grey;
+    font-size: 10px;
+    background: #fff;
+}
+
+.col__contacts {
+    color: $grey;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.spinner__animation:before {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 18px);
+    border-top: 2px solid $green;
+    border: 2px solid $green;
+    border-top-color: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    animation: spin 1.8s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.flag {
+    width: 100%;
+    max-width: 25px;
+    border-radius: 3px;
+}
+
+.score__name {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.list {
+    padding: 0 10px;
+}
+
+.status {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.status_finished {
+    color: #FA3D14;
+}
+
+.status_scheduled {
+    color: #085F00;
+}
+
+.status_error {
+    color: #EBAF14;
+}
+
+
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.breadcrumbs__item {
+    font-size: 14px;
+    font-weight: 400;
+    color: #085F00;
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
+.search {
+    display: flex;
+    position: relative;
+}
+
+.breadcrumbs {
+    padding: 10px 0;
+}
+
+.search__input {
+    width: 100%;
+    transition: all .3s;
+    border: 0;
+    background: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 15px 10px;
+    background-color: #E8E8E8;
+    color: #111;
+    font-size: 22px;
+
+    &:focus {
+        background-color: #F6F6F6;
+    }
+}
+
+.search__submit {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    top: calc(50% - 13px);
+    right: 7px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../assets/img/search.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('../assets/img/search-hover.png');
+    }
+}
+
+.col__link_competitors {
+    padding-left: 30px;
+    background: url('../assets/img/layout-list.svg') no-repeat;
+    background-size: auto 100%;
+    background-position: left center;
+    font-size: 18px;
+    color: #204527;
+    text-decoration: underline;
+}
+
+.col__link_calendar {
+    padding-left: 30px;
+    background: url('../assets/img/calendar.svg') no-repeat;
+    background-size: auto 100%;
+    background-position: left center;
+    font-size: 18px;
+    color: #204527;
+    text-decoration: underline;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding: 20px 10px;
+}
+
+.sort__title {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.sort__label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6A6A6A;
+}
+
+.sort__input {
+    font-size: 17px;
+    font-weight: 400;
+    color: #64865B;
+    padding: 5px 10px;
+    outline: 0;
+    border: none;
+    background: #EEEEEE;
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    display: inline-block;
+    max-width: 120px;
+    padding: 10px 10px;
+}
+
+.sort__button {
+
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #22983A;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 7px 15px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #0F7122;
+
+    }
+
+    &:active {
+        background-color: #245C2F;
+    }
+}
+
+.sort__input::placeholder {
+    font-weight: 300;
+    color: #C4C4C4;
+}
+
+.sort__input_active {
+    color: #64865B;
+    font-weight: 700;
+}
+
+.sort__input_error {
+    color: red;
+}
+
+.error {
+    padding: 45px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.error__img {
+    max-width: 64px;
+    margin: 0 auto;
+}
+
+.error__text {
+    font-size: 25px;
+}
+
+// .cool__item_calendar a {
+//     margin: 3px 15px;
+// }
+
+.score__name_score {
+    color: #109704;
+    font-weight: 600;
+}
+.score__score{color: #109704;}
+
+.score__link:hover {
+    text-decoration: underline;
+    color: #0F7122;
+}
+
+.input-wrap {
+    display: flex;
+    gap: 5px;
+}
+
+.col__score {
+    flex-grow: 1;
+}
+
+.score{
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    // flex-direction: column;
+}
+.cool__item_calendar {
+    display: flex;
+    flex-direction: column;
+    & a {
+        &:hover{
+            color:#109704;
+        }
+    }
+}
+
+
+.col__contacts{
+    font-size: 16px;
+    & a{
+        padding: 0 10px;
+    }
+}
+
+
+// responsive
+@media(max-width: 1200px) {
+
+    .col {
+        column-gap: 10px;
+    }
+
+    .col__lang {
+        font-size: 18px;
+    }
+
+    .col__league-name {
+        font-size: 20px;
+    }
+
+    .col__data {
+        font-size: 15px;
+    }
+
+    .col__link_competitors,
+    .col__link_calendar {
+        font-size: 16px;
+    }
+
+    .list__title {
+        font-size: 35px;
+    }
+
+}
+
+@media(max-width: 992px) {
+
+    .col__data-start {
+        flex-shrink: 0;
+    }
+
+    .col__data {
+        display: block;
+    }
+
+    .col__data-start .col__data:nth-child(2) {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .sort__button {
+        margin: 5px 0;
+    }
+
+    .input-wrap {
+        width: 100%;
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+
+    .sort__label {
+        flex-basis: 50%;
+    }
+
+    .sort {
+        flex-wrap: wrap;
+    }
+
+    .sort__input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sort__title,
+    .sort__button {
+        flex-basis: 100%;
+    }
+
+    .top-content {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .top-content__item {
+        flex-basis: 100%;
+    }
+
+    .col__number {
+        font-size: 16px;
+    }
+
+    // .col__league-name {
+    //     flex-basis: 100%;
+    // }
+
+    .col__item {
+        padding: 5px 0;
+    }
+}
+
+@media(max-width: 576px) {
+
+    .score {
+        font-size: 12px;
+       
+    }
+    .col__data {
+        font-size: 12px;
+    }
+    .status {
+        font-size: 12px;
+    }
+    .flag {
+        max-width: 12px; 
+    }
+    .col__img{
+        flex-shrink: 0;
+    }
+
+    .list__title {
+        font-size: 25px;
+    }
+
+    .sort {
+        flex-wrap: wrap;
+        padding: 5px 10px;
+    }
+
+    .sort__label {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .col__contacts {
+        font-size: 12px;
+    }
+
+    .col__img {
+        flex-basis: auto;
+    }
+
+    .col__item_status {
+        text-align: center;
+    }
+    .col__league-name {
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .col__lang {
+        font-size: 12px;
+    }
+    .col__link_competitors, .col__link_calendar {
+        font-size: 12px;
+    }
+    .col__number {
+        font-size: 12px;
+        display: none;
+    }
+    .list {
+         padding: 0 0; 
+    }
+    .cool__item_calendar a {
+        margin: 3px 0px;
+    }
+    .col {
+        column-gap: 5px;
+    }
+
+    .col__link_calendar,  .col__link_competitors{
+        padding-left: 20px;
+    }
+    .col__contacts{
+        display: none;
+    }
+    .leguage-team{
+        display: none;
+    }
+    .cool__item_calendar{
+        display: flex;
+        flex-direction: column;
+    }
+}
