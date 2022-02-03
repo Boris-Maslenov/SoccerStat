@@ -3,6 +3,7 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 import LeagueCalendarList from "../leagueCalendarList/LeagueCalendarList.js";
 import SoccerService from '../../services/SoccerService.js';
 import DateFilter from "../dateFilter/DateFilter.js";
+import BreadCrumbs from "../breadCrumbs/BreadCrumbs.js";
 import NotFound from "../notFound/NotFound.js";
 import Error from "../error/Error.js";
 import Spinner from "../spinner/Spinner.js";
@@ -76,6 +77,10 @@ const LeagueCalendar = () => {
     return(
                 <>
                     <div className="top-content">
+
+                        <div className="top-content__item">
+                                <BreadCrumbs list={[{'patch':'/','title': 'Home'}]}  />
+                        </div>
                         <div className="top-content__item">
                                 <DateFilter onFiltered={onFiltered} getParam={search} />
                         </div>

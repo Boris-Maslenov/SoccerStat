@@ -56,14 +56,16 @@ return(
     <form className="sort">
 
             <span className="sort__title">Sort by Dater</span>
+            <div className="input-wrap">
+                <div className="sort__label" >from: <input onChange={e=>onFilterValue(e)} value={filterValue.dateStart} className={clazz} placeholder="2021-01-01"  name="dateStart" /> </div>
 
-               <div className="sort__label" >from: <input onChange={e=>onFilterValue(e)} value={filterValue.dateStart} className={clazz} placeholder="2021-01-01"  name="dateStart" /> </div>
-
-               <div className="sort__label" >to: <input onChange={e=>onFilterValue(e)} className={clazz} value={filterValue.dateEnd} placeholder="2022-01-01" name="dateEnd" /> </div>
-
+                <div className="sort__label" >to: <input onChange={e=>onFilterValue(e)} className={clazz} value={filterValue.dateEnd} placeholder="2022-01-01" name="dateEnd" /> </div>
+            </div>
             <button onClick={e=>onSubmit(e)} className="sort__button" type="submit">Sort</button>
 
     </form>
+
+
 
 )
 

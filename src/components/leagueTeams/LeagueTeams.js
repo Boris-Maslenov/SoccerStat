@@ -112,7 +112,7 @@ const LeagueTeams = () => {
             <div className="top-content">
 
                         <div className="top-content__item">
-                                <BreadCrumbs list={[{'patch': "/", 'title': 'home'}]} />
+                                <BreadCrumbs list={[{'patch': "/", 'title': 'Home'}]} />
                         </div>
 
                         <div className="top-content__item">

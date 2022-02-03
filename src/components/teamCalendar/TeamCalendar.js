@@ -32,13 +32,12 @@ const TeamCalendar = () => {
             
         }
 
-//   filters start
+
 const onFiltered = (dateStart, dateEnd) => {
     setLoading(true);
     navigate(`?dateFrom=${dateStart}&dateTo=${dateEnd}`, { replace: true });
     onRequest(`https://api.football-data.org/v2/teams/${teamId}/matches?dateFrom=${dateStart}&dateTo=${dateEnd}`);  
 }
-//   filters end
 
     const onRequestTeam = (offset) => {
           soccerService.request(offset)
@@ -120,7 +119,7 @@ const onFiltered = (dateStart, dateEnd) => {
         <>
                 <div className="top-content">
                         <div className="top-content__item">
-                                <BreadCrumbs list={[{'patch': "/", 'title': 'home'}]} />
+                                <BreadCrumbs list={[{'patch': "/", 'title': 'Home'}]} />
                         </div>
                     <div className="top-content__item">
                             <DateFilter onFiltered={onFiltered} getParam={search} />
@@ -136,7 +135,6 @@ const onFiltered = (dateStart, dateEnd) => {
 
     </>
     )
-    
 } 
 
 export default TeamCalendar;

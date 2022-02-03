@@ -2,7 +2,6 @@ import React from "react";
 
 const LeagueCalendarList = ({clazz, item, number}) => {
 
-    console.log(item);
     return(
 
         <div className="col">

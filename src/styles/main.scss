@@ -485,12 +485,12 @@ h3 {
     display: flex;
     font-weight: 500;
     font-size: 20px;
-    // flex-direction: column;
 }
 .cool__item_calendar {
     display: flex;
     flex-direction: column;
     & a {
+        margin:3px 0px;
         &:hover{
             color:#109704;
         }
